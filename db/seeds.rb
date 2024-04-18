@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+# db/seeds.rb
+countries = ['Japan', 'Korea', 'Singapore']
+countries.each do |country_name|
+  Country.create(name: country_name)
+end

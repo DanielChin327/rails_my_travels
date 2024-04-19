@@ -1,6 +1,29 @@
 <!-- app/views/countries/index.html.erb -->
 
 
-<% @countries.each do |country| %>
-  <h2><%= link_to country.name, country_path(country) %></h2>
-<% end %>
+<div class="banner" >
+
+  <div class="container">
+    <h1>Welcome to My Travels!</h1>
+    <p>This site accounts for my journey and shows places that I had travelled to</p>
+  </div>
+</div>
+
+
+<p>I wanted a place where I could document and record places that I had travelled to. Some of these places are pretty well known. Others were just mundane places that I enjoyed. Hopefully, in time, others can use this website and get some of their own ideas</p>
+
+
+<div class="row">
+  <% @countries.each do |country| %>
+    <div class="col-md-4 mb-4">
+      <div class="card" style="width: 18rem;">
+        <%= image_tag "#{country.name.downcase}.png", class: "card-img-top", alt: "#{country.name}" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= country.name %></h5>
+          <p class="card-text">Discover the hidden gems and popular spots in <%= country.name %>!</p>
+          <%= link_to 'Explore', country_path(country), class: "btn btn-#{country.name.downcase}" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

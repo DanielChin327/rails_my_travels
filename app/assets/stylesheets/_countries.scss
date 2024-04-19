@@ -1,25 +1,54 @@
 // app/assets/stylesheets/_countries.scss
+$singapore-color: rgb(117, 115, 115);
+$japan-color: red;
+$korea-color: blue;
+$black: black;
 
+// _countries.scss
 .card {
-  // Example of overriding Bootstrap's default card width
-  width: 100% !important; // Use !important sparingly
+  width: 100% !important;
 
   .card-img-top {
-    // Example: add a filter or adjust the height of the images
     filter: brightness(90%);
-    height: 200px; // Adjust based on your preference
-    object-fit: cover; // Ensure the image covers the card top area
+    height: 200px;
+    object-fit: cover;
   }
 
   .card-body {
     h5.card-title {
-      // Custom style for the card title
-      color: $primary-color; // Assuming you have a $primary-color variable in your variables.scss
+      color: rgb(0, 0, 0); // Use a generic primary color or create specific ones per country
     }
 
+    // General style for buttons (if any)
     .btn-primary {
-      // Example: Custom style for the button
-      background-color: $secondary-color; // Assuming you have a $secondary-color variable
+      background-color: rgb(0, 0, 0);
+    }
+
+    // Specific styles for each country's button
+    .btn-japan {
+      background-color: $japan-color;
+    }
+    .btn-japan:hover{
+      background: #ff2424;
+      color: white;
+    }
+
+    .btn-korea {
+      background-color: $korea-color;
+    }
+
+    .btn-korea:hover{
+      background: #3648ed;
+      color: white;
+    }
+
+    .btn-singapore {
+      background-color: $singapore-color;
+    }
+
+    .btn-singapore:hover{
+      background:rgb(148, 148, 148);
+      color:white;
     }
   }
 }

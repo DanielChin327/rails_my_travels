@@ -1,0 +1,6 @@
+<!-- app/views/countries/show.html.erb -->
+<h1><%= @country.name %></h1>
+<% @posts.each do |post| %>
+  <p><%= link_to post.title, country_post_path(@country, post) %></p>
+<% end %>
+<p><%= link_to 'Add New Post', new_country_post_path(@country) %></p>

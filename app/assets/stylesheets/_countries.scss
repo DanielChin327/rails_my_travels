@@ -1,0 +1,25 @@
+// app/assets/stylesheets/_countries.scss
+
+.card {
+  // Example of overriding Bootstrap's default card width
+  width: 100% !important; // Use !important sparingly
+
+  .card-img-top {
+    // Example: add a filter or adjust the height of the images
+    filter: brightness(90%);
+    height: 200px; // Adjust based on your preference
+    object-fit: cover; // Ensure the image covers the card top area
+  }
+
+  .card-body {
+    h5.card-title {
+      // Custom style for the card title
+      color: $primary-color; // Assuming you have a $primary-color variable in your variables.scss
+    }
+
+    .btn-primary {
+      // Example: Custom style for the button
+      background-color: $secondary-color; // Assuming you have a $secondary-color variable
+    }
+  }
+}

@@ -1,0 +1,6 @@
+<!-- app/views/countries/index.html.erb -->
+
+
+<% @countries.each do |country| %>
+  <h2><%= link_to country.name, country_path(country) %></h2>
+<% end %>

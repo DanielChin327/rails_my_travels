@@ -1,6 +1,12 @@
 <!-- app/views/countries/show.html.erb -->
 <h1><%= @country.name %></h1>
-<% @posts.each do |post| %>
-  <p><%= link_to post.title, country_post_path(@country, post) %></p>
-<% end %>
-<p><%= link_to 'Add New Post', new_country_post_path(@country) %></p>
+
+<div class="posts-list">
+  <% @posts.each do |post| %>
+    <div class="post-item">
+      <h2><%= link_to post.title, country_post_path(@country, post) %></h2>
+      <p><%= truncate(post.content, length: 100) %> <!-- Assuming posts have a content attribute --></p>
+    </div>
+  <% end %>
+  <p><%= link_to 'Add New Post', new_country_post_path(@country) %></p>
+</div>

@@ -38,3 +38,22 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+.card-category {
+  height: 300px; // Set a fixed height
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; // Ensure the text is visible
+  font-size: 24px; // Larger text for visibility
+  text-transform: uppercase; // Stylistic choice for uppercase text
+  text-decoration: none; // Removes underline from links if using <a> tags
+}
+
+.card-link {
+  color: white; // Make the link text white
+  text-decoration: none; // No underline
+  font-weight: bold; // Bold for visibility
+}
